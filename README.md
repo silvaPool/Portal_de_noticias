@@ -1,5 +1,5 @@
 # Portal_de_noticias
-É um portal de notícias em que você encontra notícias sobre esporte, politica, geral e entre outros. E tem mais... você compartilha uma notícia no twitter ou Instagram.
+É um portal de notícias em que você encontra notícias sobre esporte, política, geral e entre outros. E tem mais... você compartilha uma notícia no twitter ou Instagram.
 
 Estilos: Aqui utilizei theme no material ui e Styled Components.
 
