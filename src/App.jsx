@@ -4,7 +4,7 @@ import './App.css';
 import Pagina from "./components/Pagina";
 import Sessao1 from "./components/Sessao1";
 import theme from './theme/theme';
-import { ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Noticias from "./pages/Noticias";
 
