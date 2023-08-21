@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { ThemeProvider } from '@mui/system';
-import { createTheme } from '@mui/material/styles';
+import { createTheme,  ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -73,4 +72,4 @@ const theme = createTheme({
   },
 });
 
-export default theme
+export default theme;
