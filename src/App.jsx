@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import api from "./services/api";
-import './App.css'
+import './App.css';
 import Pagina from "./components/Pagina";
 import Sessao1 from "./components/Sessao1";
-import theme from './theme/theme'
-import { ThemeProvider } from '@mui/material'
-import Elvis from './assets/images/elvis.jpg'
+import theme from './theme/theme';
+import { ThemeProvider } from '@mui/material';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Noticias from "./pages/Noticias";
 
