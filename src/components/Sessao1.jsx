@@ -56,7 +56,7 @@ function Cards() {
                         </StyleTypography>
                     </CardContent>
                     <CardActions>
-                        <Button variant='contained' onClick={() => navigate("/noticias/esporte")}>Entrar</Button>
+                        <Button variant='contained' onClick={() => navigate("/noticias/sports")}>Entrar</Button>
                     </CardActions>
                 </Card>
 
@@ -75,7 +75,7 @@ function Cards() {
                         </StyleTypography>
                     </CardContent>
                     <CardActions>
-                        <Button variant='contained' onClick={() => navigate("/noticias/politica")}>Entrar</Button>
+                        <Button variant='contained' onClick={() => navigate("/noticias/politics")}>Entrar</Button>
                     </CardActions>
                 </Card>
 
@@ -94,7 +94,7 @@ function Cards() {
                         </StyleTypography>
                     </CardContent>
                     <CardActions>
-                        <Button variant='contained' onClick={() => navigate("/noticias/entretenimento")}>Entrar</Button>
+                        <Button variant='contained' onClick={() => navigate("/noticias/entertainment")}>Entrar</Button>
                     </CardActions>
                 </Card>
             </StyledBoxSessao1>
@@ -115,7 +115,7 @@ function Cards() {
                         </StyleTypography>
                     </CardContent>
                     <CardActions>
-                        <Button variant='contained' onClick={() => navigate("/noticias/geral")}>Entrar</Button>
+                        <Button variant='contained' onClick={() => navigate("/noticias/general")}>Entrar</Button>
                     </CardActions>
                 </Card>
 
@@ -134,7 +134,7 @@ function Cards() {
                         </StyleTypography>
                     </CardContent>
                     <CardActions>
-                        <Button variant='contained' onClick={() => navigate("/noticias/saude")}>Entrar</Button>
+                        <Button variant='contained' onClick={() => navigate("/noticias/health")}>Entrar</Button>
                     </CardActions>
                 </Card>
 
@@ -153,7 +153,7 @@ function Cards() {
                         </StyleTypography>
                     </CardContent>
                     <CardActions>
-                        <Button variant='contained' onClick={() => navigate("/noticias/tecnologia")}>Entrar</Button>
+                        <Button variant='contained' onClick={() => navigate("/noticias/technology")}>Entrar</Button>
                     </CardActions>
                 </Card>
             </StyledBoxSessao1>

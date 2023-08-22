@@ -27,6 +27,12 @@ function filterSessao(sessao) {
     return data;
 }
 
+function getCategoryData(category) {
+      return api
+     .get('/doc/doc', { params: { query: `${category} sourcecountry:BR`, sourcecountry: 'BR', mode: 'ArtList', format: 'json' } })
+
+    }
+
 
 
 
@@ -40,37 +46,41 @@ function Noticias() {
     const [copySuccess, setCopySuccess] = useState('');
     const [open, setOpen] = useState(false);
 
+    
+
     useEffect(() => {
         const dataFilter = filterSessao(type);
-        setStateData(dataFilter);
+        setStateData(dataFilter ?? {});
+        
         // console.log(stateData);
         // console.log(dataFilter);
     }, [sessoes, type]);
 
+   
 
     useEffect(() => {
-        if (Object.keys(stateData).length > 0) {
-            api
-                .get('/top-headlines', { params: { country: 'br', category: stateData.category, apiKey: '07d13f0494ed44e083dade115acd399d' } })
-                .then((response) => setArticle(response.data.articles))
-        }
-    }, [stateData]);
+        getCategoryData(type)
+        .then((response) => {
+          setArticle(response.data.articles)
+          console.log(response);
+      })
+    }, [type]);
 
-    useEffect(() => {
-        // chamada à API para buscar os dados
+    // useEffect(() => {
+    //     // chamada à API para buscar os dados
 
-        const fetchApiData = async () => {
-            try {
-                const response = await fetch('https://newsapi.org/v2/top-headlines');
-                const data = await response.json();
-                setApiData(data);
-                setLoading(false);
-            } catch (error) {
-                console.error('Erro ao buscar os dados da API:', error);
-            }
-        };
-        fetchApiData();
-    }, []);
+    //     const fetchApiData = async () => {
+    //         try {
+    //             const response = await fetch('https://api.gdeltproject.org/api/v2/doc/doc');
+    //             const data = await response.json();
+    //             setApiData(data);
+    //             setLoading(false);
+    //         } catch (error) {
+    //             console.error('Erro ao buscar os dados da API:', error);
+    //         }
+    //     };
+    //     fetchApiData();
+    // }, []);
 
     const handleShare = () => {
         setOpen(true);
