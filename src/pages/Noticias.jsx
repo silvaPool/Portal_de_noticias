@@ -63,6 +63,7 @@ function Noticias() {
         .then((response) => {
           setArticle(response.data.articles)
           console.log(response);
+          console.log(response.data.articles);
       })
     }, [type]);
 
@@ -140,12 +141,14 @@ function Noticias() {
     return (
         <Box sx={{ width: '90%', margin: '1rem auto 1rem', padding: '2rem' }}>
             <Typography variant="h2" sx={{ position: 'relative', right: '2%', color:'white' }}>
-                {capitalizeWords(stateData?.titulo)}
+                {capitalizeWords(stateData?.titulo)} 
             </Typography>
 
             <Typography variant="body2" sx={{ marginBottom: '1rem', fontSize: '1.2rem', color:'white' }}>
                 {stateData?.conteudo}
             </Typography>
+
+            <Button variant="outlined" sx={{marginBottom: '0.5rem', position: 'relative', left: '80%'}} color="secondary" onClick={() => navigate("/noticias")}>Voltar para a página principal</Button>
 
             {article.map(item => (
 
@@ -161,16 +164,19 @@ function Noticias() {
                         </AccordionSummary>
                         <AccordionDetails sx={{ backgroundColor: 'white' }}>
                             <Typography sx={{ marginBottom: '0.5rem' }}>
-                                Data de publicação: {item.publishedAt}
+                                Data de publicação: {item.seendate}
+                            </Typography>
+                            <Typography sx={{ marginBottom: '0.5rem' }}>
+                               Domínio: {item.domain}
+                            </Typography>
+                            <Typography sx={{ marginBottom: '0.5rem' }}>
+                               País: {item.sourcecountry}
                             </Typography>
                             <Typography variant="h2" sx={{ fontSize: '1.2rem', position: 'relative', right: '2%' }}>
                                 Clique no botão e veja a notícia completa
                             </Typography>
 
-                            {loading ? (
-                                <CircularProgress /> // Exibe um indicador de progresso enquanto os dados são carregados
-                            ) : (
-                                apiData && (
+                          
                                     <>
                                         <Typography component='a' href={item.url} target="_blank" >
                                             <StyleButton onClick={() => navigator.clipboard.writeText('copy this text to clipboard')}>Notícia</StyleButton>
@@ -194,8 +200,7 @@ function Noticias() {
 
 
                                     </>
-                                )
-                            )}
+                             
 
 
 
@@ -207,7 +212,7 @@ function Noticias() {
             ))
             }
 
-            <Button variant="outlined" color="secondary" onClick={() => navigate("/sessao1")}>Voltar para a página principal</Button>
+            <Button variant="outlined" color="secondary" onClick={() => navigate("/noticias")}>Voltar para a página principal</Button>
 
         </Box >
     )

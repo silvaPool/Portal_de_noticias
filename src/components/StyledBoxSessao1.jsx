@@ -5,8 +5,9 @@ const StyledBoxSessao1 = styled(Box)`
     && {
 
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+        gap: 5rem;
         margin-top: 5rem;
 
 }`;

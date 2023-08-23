@@ -7,6 +7,7 @@ import { MaquinaDeEscrever } from './MaquinaDeEscrever';
 import { Button } from '@mui/material';
 import Sessao1 from './Sessao1'
 import { useNavigate } from "react-router-dom";
+import StyledButtonPagina from './StyledButtonPagina';
 
 function Pagina() {
     const navigate = useNavigate();
@@ -47,7 +48,7 @@ function Pagina() {
                    <MaquinaDeEscrever text=" O maior portal de notícias do país" />
                 </StyleTypography>
 
-                <StyleButton onClick={() => navigate("/sessao1")}>Entrar</StyleButton>
+                <StyledButtonPagina onClick={() => navigate("/noticias")}><span>Entrar</span></StyledButtonPagina>
 
         </StyleBox>
         )

@@ -26,7 +26,7 @@ function App() {
 
           <Routes>
             <Route exact path="/" element={<Pagina />} />
-            <Route exact path="/sessao1" element={<Sessao1 />} />
+            <Route exact path="/noticias" element={<Sessao1 />} />
             <Route path="/noticias/:type" element={<Noticias />} />
           </Routes>
 
