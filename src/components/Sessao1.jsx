@@ -5,14 +5,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
-import Esportes from '../assets/images/esportes.jpg'
-import Nacional from '../assets/images/nacional.jpg'
-import Politica from '../assets/images/politica.jpg'
-import Musica from '../assets/images/musica.jpg'
-import Tech from '../assets/images/tech.jpg'
-import Entretenimento from '../assets/images/entretenimento.jpg'
-import Internacional from '../assets/images/internacional.jpg'
-import Saude from '../assets/images/saude.jpg'
+import Esportes from '../assets/images/esportes.webp'
+import Politica from '../assets/images/politica.webp'
+import Tech from '../assets/images/tech.webp'
+import Entretenimento from '../assets/images/entretenimento.webp'
+import Internacional from '../assets/images/geral.webp'
+import Saude from '../assets/images/saude2.webp'
 import { useNavigate } from "react-router-dom";
 import { Box, Grid } from '@mui/material';
 import sessoes from '../data/Cards';
