@@ -141,7 +141,7 @@ function Noticias() {
     return (
         <Box sx={{ width: '90%', margin: '1rem auto 1rem', padding: '2rem' }}>
             <Typography variant="h2" sx={{ position: 'relative', right: '2%', color:'white' }}>
-                {capitalizeWords(stateData?.titulo)} 
+                {capitalizeWords(stateData?.tituloCard)} 
             </Typography>
 
             <Typography variant="body2" sx={{ marginBottom: '1rem', fontSize: '1.2rem', color:'white' }}>

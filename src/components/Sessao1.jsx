@@ -53,7 +53,7 @@ function Cards() {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[0].titulo}
+                                    {sessoes[0].tituloCard}
                                 </Typography>
                                 <StyleTypography>
                                     {sessoes[0].conteudo}
@@ -74,7 +74,7 @@ function Cards() {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[1].titulo}
+                                    {sessoes[1].tituloCard}
                                 </Typography>
                                 <StyleTypography>
                                     {sessoes[1].conteudo}
@@ -95,7 +95,7 @@ function Cards() {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[2].titulo}
+                                    {sessoes[2].tituloCard}
                                 </Typography>
                                 <StyleTypography>
                                     {sessoes[2].conteudo}
@@ -118,7 +118,7 @@ function Cards() {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[3].titulo}
+                                    {sessoes[3].tituloCard}
                                 </Typography>
                                 <StyleTypography>
                                     {sessoes[3].conteudo}
@@ -140,7 +140,7 @@ function Cards() {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[4].titulo}
+                                    {sessoes[4].tituloCard}
                                 </Typography>
                                 <StyleTypography>
                                     {sessoes[4].conteudo}
@@ -162,7 +162,7 @@ function Cards() {
                             />
                             <CardContent>
                                 <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[5].titulo}
+                                    {sessoes[5].tituloCard}
                                 </Typography>
                                 <StyleTypography>
                                     {sessoes[5].conteudo}
