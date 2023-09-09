@@ -37,139 +37,120 @@ function Cards() {
     return (
         <>
 
-        
 
-            <Box sx={{width: '80%', margin: '0 auto', padding: '2rem'}}>
 
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Box sx={{ width: '80%', margin: '0 auto', padding: '5rem', marginTop: '2rem'}}>
+
+                <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item xl={4} md={4}>
-                        <Card sx={{ maxWidth: 350, maxHeight: 350, marginBottom: '2rem', borderRadius: '1rem' }}>
-                            <CardMedia
-                                sx={{ height: 140 }}
-                                image={Esportes}
-                                title="Esportes"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[0].tituloCard}
-                                </Typography>
-                                <StyleTypography>
-                                    {sessoes[0].conteudo}
-                                </StyleTypography>
-                            </CardContent>
-                            <CardActions>
-                                <Button variant='contained' onClick={() => navigate("/noticias/sports")}>Entrar</Button>
-                            </CardActions>
-                        </Card>
+                       
+                        <a href='/noticias/sports'>
+                            <div class="card-container">
+                                <div class="card">
+                                    <div class="front-content">
+                                        <p>{sessoes[0].tituloCard}</p>
+                                    </div>
+                                    <div class="content">
+                                        <p class="heading">{sessoes[0].tituloCard}</p>
+                                        <p>
+                                            {sessoes[0].conteudo}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </Grid>
 
-                    <Grid item  xl={4} md={4}>
-                        <Card sx={{ maxWidth: 350, maxHeight: 350, marginBottom: '2rem', borderRadius: '1rem' }}>
-                            <CardMedia
-                                sx={{ height: 140 }}
-                                image={Politica}
-                                title="Política"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[1].tituloCard}
-                                </Typography>
-                                <StyleTypography>
-                                    {sessoes[1].conteudo}
-                                </StyleTypography>
-                            </CardContent>
-                            <CardActions>
-                                <Button variant='contained' onClick={() => navigate("/noticias/politics")}>Entrar</Button>
-                            </CardActions>
-                        </Card>
+                    <Grid item xl={4} md={4}>
+                        <a href="/noticias/politics">
+                            <div class="card-container">
+                                <div class="card">
+                                    <div class="front-content">
+                                        <p>{sessoes[1].tituloCard}</p>
+                                    </div>
+                                    <div class="content">
+                                        <p class="heading">{sessoes[1].tituloCard}</p>
+                                        <p>
+                                            {sessoes[1].conteudo}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </Grid>
 
-                    <Grid item  xl={4} md={4}>
-                        <Card sx={{ maxWidth: 350, maxHeight: 350, marginBottom: '2rem', borderRadius: '1rem' }}>
-                            <CardMedia
-                                sx={{ height: 140 }}
-                                image={Entretenimento}
-                                title="Entretenimento"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[2].tituloCard}
-                                </Typography>
-                                <StyleTypography>
-                                    {sessoes[2].conteudo}
-                                </StyleTypography>
-                            </CardContent>
-                            <CardActions>
-                                <Button variant='contained' onClick={() => navigate("/noticias/entertainment")}>Entrar</Button>
-                            </CardActions>
-                        </Card>
+                    <Grid item xl={4} md={4}>
+                        <a href="/noticias/entertainment">
+                            <div class="card-container">
+                                <div class="card">
+                                    <div class="front-content">
+                                        <p>{sessoes[2].tituloCard}</p>
+                                    </div>
+                                    <div class="content">
+                                        <p class="heading">{sessoes[2].tituloCard}</p>
+                                        <p>
+                                            {sessoes[2].conteudo}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </Grid>
 
 
 
                     <Grid item xl={4} md={4}>
-                        <Card sx={{ maxWidth: 350, maxHeight: 350, marginBottom: '2rem', borderRadius: '1rem' }}>
-                            <CardMedia
-                                sx={{ height: 140 }}
-                                image={Internacional}
-                                title="Geral"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[3].tituloCard}
-                                </Typography>
-                                <StyleTypography>
-                                    {sessoes[3].conteudo}
-                                </StyleTypography>
-                            </CardContent>
-                            <CardActions>
-                                <Button variant='contained' onClick={() => navigate("/noticias/general")}>Entrar</Button>
-                            </CardActions>
-                        </Card>
+                        <a href="/noticias/general">
+                            <div class="card-container">
+                                <div class="card">
+                                    <div class="front-content">
+                                        <p>{sessoes[3].tituloCard}</p>
+                                    </div>
+                                    <div class="content">
+                                        <p class="heading">{sessoes[3].tituloCard}</p>
+                                        <p>
+                                            {sessoes[3].conteudo}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </Grid>
 
                     <Grid item xl={4} md={4}>
-
-                        <Card sx={{ maxWidth: 350, maxHeight: 350, marginBottom: '2rem', borderRadius: '1rem' }}>
-                            <CardMedia
-                                sx={{ height: 140 }}
-                                image={Saude}
-                                title="Saúde"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[4].tituloCard}
-                                </Typography>
-                                <StyleTypography>
-                                    {sessoes[4].conteudo}
-                                </StyleTypography>
-                            </CardContent>
-                            <CardActions>
-                                <Button variant='contained' onClick={() => navigate("/noticias/health")}>Entrar</Button>
-                            </CardActions>
-                        </Card>
+                        <a href="/noticias/health">
+                            <div class="card-container">
+                                <div class="card">
+                                    <div class="front-content">
+                                        <p>{sessoes[4].tituloCard}</p>
+                                    </div>
+                                    <div class="content">
+                                        <p class="heading">{sessoes[4].tituloCard}</p>
+                                        <p>
+                                            {sessoes[4].conteudo}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </Grid>
 
                     <Grid item xl={4} md={4}>
-
-                        <Card sx={{ maxWidth: 350, maxHeight: 350, marginBottom: '2rem', borderRadius: '1rem' }}>
-                            <CardMedia
-                                sx={{ height: 140 }}
-                                image={Tech}
-                                title="Tecnologia"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant='h5' component="div">
-                                    {sessoes[5].tituloCard}
-                                </Typography>
-                                <StyleTypography>
-                                    {sessoes[5].conteudo}
-                                </StyleTypography>
-                            </CardContent>
-                            <CardActions>
-                                <Button variant='contained' onClick={() => navigate("/noticias/technology")}>Entrar</Button>
-                            </CardActions>
-                        </Card>
+                        <a href="/noticias/technology">
+                            <div class="card-container">
+                                <div class="card">
+                                    <div class="front-content">
+                                        <p>{sessoes[5].tituloCard}</p>
+                                    </div>
+                                    <div class="content">
+                                        <p class="heading">{sessoes[5].tituloCard}</p>
+                                        <p>
+                                            {sessoes[5].conteudo}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </Grid>
 
                     <Grid item>

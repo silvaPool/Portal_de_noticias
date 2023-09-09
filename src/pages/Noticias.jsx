@@ -9,7 +9,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Link from '@mui/material/Link';
-import  IconButton from '@mui/material/IconButton';
+import IconButton from '@mui/material/IconButton';
 import ShareIcon from '@mui/icons-material/Share';
 import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
@@ -28,10 +28,10 @@ function filterSessao(sessao) {
 }
 
 function getCategoryData(category) {
-      return api
-     .get('/doc/doc', { params: { query: `${category} sourcecountry:BR`, sourcecountry: 'BR', mode: 'ArtList', format: 'json' } })
+    return api
+        .get('/doc/doc', { params: { query: `${category} sourcecountry:BR`, sourcecountry: 'BR', mode: 'ArtList', format: 'json' } })
 
-    }
+}
 
 
 
@@ -46,25 +46,25 @@ function Noticias() {
     const [copySuccess, setCopySuccess] = useState('');
     const [open, setOpen] = useState(false);
 
-    
+
 
     useEffect(() => {
         const dataFilter = filterSessao(type);
         setStateData(dataFilter ?? {});
-        
+
         // console.log(stateData);
         // console.log(dataFilter);
     }, [sessoes, type]);
 
-   
+
 
     useEffect(() => {
         getCategoryData(type)
-        .then((response) => {
-          setArticle(response.data.articles)
-          console.log(response);
-          console.log(response.data.articles);
-      })
+            .then((response) => {
+                setArticle(response.data.articles)
+                console.log(response);
+                console.log(response.data.articles);
+            })
     }, [type]);
 
     // useEffect(() => {
@@ -93,7 +93,7 @@ function Noticias() {
 
 
     const handleTwitterShare = (contentLink) => {
-    const shareText = `Confira este conteúdo interessante! ${contentLink}`;
+        const shareText = `Confira este conteúdo interessante! ${contentLink}`;
         const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
         window.open(twitterShareUrl, '_blank');
     }
@@ -101,7 +101,7 @@ function Noticias() {
     const handleInstagramShare = (imageURL, caption) => {
         const instagramShareUrl = `https://www.instagram.com/share?url=${encodeURIComponent(imageURL)}&caption=${encodeURIComponent(caption)}`;
         window.open(instagramShareUrl, '_blank');
-      };
+    };
 
     function capitalizeWords(str = "") {
         // Dividir a string em um array de palavras
@@ -140,19 +140,21 @@ function Noticias() {
 
     return (
         <Box sx={{ width: '90%', margin: '1rem auto 1rem', padding: '2rem' }}>
-            <Typography variant="h2" sx={{ position: 'relative', right: '2%', color:'white' }}>
-                {capitalizeWords(stateData?.tituloCard)} 
+            <Typography variant="h2" sx={{ position: 'relative', right: '2%', color: 'white' }}>
+                {capitalizeWords(stateData?.tituloCard)}
             </Typography>
 
-            <Typography variant="body2" sx={{ marginBottom: '1rem', fontSize: '1.2rem', color:'white' }}>
+            <Typography variant="body2" sx={{ marginBottom: '1rem', fontSize: '1.2rem', color: 'white' }}>
                 {stateData?.conteudo}
             </Typography>
 
-            <Button variant="outlined" sx={{marginBottom: '0.5rem', position: 'relative', left: '80%'}} color="secondary" onClick={() => navigate("/noticias")}>Voltar para a página principal</Button>
+            <Button variant="outlined" sx={{ marginBottom: '0.5rem', position: 'relative', left: '80%' }} color="secondary" onClick={() => navigate("/noticias")}>Voltar para a página principal</Button>
 
-            {article.map(item => (
 
-                <div>
+             {article.map(item => (
+
+                
+                <div key={item.id}>
                     <Accordion sx={{ backgroundColor: '#DCDCDC', color: 'black', marginBottom: '1.2rem' }}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
@@ -200,18 +202,15 @@ function Noticias() {
 
 
                                     </>
-                             
-
-
-
                         </AccordionDetails>
                     </Accordion>
                 </div>
 
 
             ))
-            }
+            } 
 
+          
             <Button variant="outlined" color="secondary" onClick={() => navigate("/noticias")}>Voltar para a página principal</Button>
 
         </Box >
